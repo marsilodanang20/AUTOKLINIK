@@ -375,16 +375,9 @@ body {
 
 .about .row {
   display: flex;
-  justify-content: center;
-  flex-direction: column; /* Membuat elemen bertumpuk vertikal */
-  align-items: center; /* Menjaga elemen berada di tengah */
-  gap: 1.5rem; /* Jarak antar elemen */
-}
-
-.about .about-img {
-  display: flex;
-  flex-direction: column; /* Gambar dan teks ditumpuk vertikal */
-  align-items: center; /* Teks berada di tengah gambar */
+  flex-direction: column; /* Elemen ditumpuk secara vertikal */
+  align-items: center; /* Semua elemen di tengah secara horizontal */
+  text-align: center; /* Menjaga teks di tengah */
 }
 
 .about .about-img img {
@@ -395,9 +388,9 @@ body {
 
 .about .about-text {
   margin-top: 1rem; /* Jarak antara gambar dan teks */
-  text-align: center; /* Menempatkan teks di tengah */
   font-size: 1.6rem; /* Ukuran teks */
   color: #555; /* Warna teks */
+  line-height: 1.6; /* Jarak antar baris */
 }
 
 @media (max-width: 768px) {
@@ -405,6 +398,7 @@ body {
     font-size: 1.4rem; /* Ukuran teks lebih kecil di layar kecil */
   }
 }
+
 
 
 
