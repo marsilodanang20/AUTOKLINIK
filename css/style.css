@@ -359,80 +359,55 @@ body {
 }
 
 /* About Section */
-.about,
-.menu,
-.products,
-.contact {
+.about {
   padding: 8rem 7% 1.4rem;
 }
 
-.about h2,
-.menu h2,
-.products h2,
-.contact h2 {
+.about h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
 }
 
-.about h2 span,
-.menu h2 span,
-.products h2 span,
-.contact h2 span {
+.about h2 span {
   color: var(--primary);
 }
 
 .about .row {
   display: flex;
-  justify-content: center; /* Agar item dalam .row berada di tengah */
-  flex-wrap: wrap; /* Mendukung responsivitas jika elemen melebihi lebar kontainer */
-  gap: 2rem; /* Jarak antar elemen dalam baris */
+  justify-content: center;
+  flex-wrap: wrap; /* Mendukung responsivitas */
+  gap: 2rem; /* Jarak antar elemen */
 }
 
-.about .row .about-img {
-  flex: 1 1 50%; /* Proporsi lebar kolom gambar */
+.about .about-img {
+  flex: 1 1 50%; /* Lebar kolom gambar */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.about .row .about-img img {
-  max-width: 100%; /* Gambar tidak melebihi ukuran kontainer */
-  height: auto; /* Menjaga rasio aspek gambar */
-  object-fit: contain; /* Menampilkan gambar sepenuhnya tanpa cropping */
+.about .about-img img {
+  max-width: 100%; /* Membuat gambar responsif */
+  height: auto; /* Menjaga proporsi gambar */
+  object-fit: contain; /* Gambar tidak terpotong */
 }
 
-.about .row .content {
-  flex: 1 1 30%; /* Proporsi lebar kolom konten */
-  padding: 1rem; /* Memberikan ruang dalam konten */
-  text-align: justify; /* Merapikan teks agar lebih teratur */
-}
-
-.about .row .content h3 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: var(--secondary); /* Warna teks heading */
-}
-
-.about .row .content p {
-  margin-bottom: 1.2rem;
-  font-size: 1.4rem;
-  line-height: 1.8;
-  color: var(--text-color); /* Tambahkan variabel untuk warna teks */
+.about .about-text {
+  text-align: center; /* Teks di tengah */
+  font-size: 1.6rem;
+  color: #555;
+  margin-top: 1rem; /* Jarak antara gambar dan teks */
 }
 
 @media (max-width: 768px) {
-  .about .row {
-    flex-direction: column; /* Elemen ditumpuk secara vertikal di layar kecil */
+  .about .about-img {
+    flex: none; /* Mengatur ulang lebar kolom */
+    width: 100%; /* Gambar menjadi lebar penuh */
   }
 
-  .about .row .about-img {
-    flex: none;
-    width: 100%; /* Lebar penuh untuk gambar di perangkat kecil */
-  }
-
-  .about .row .content {
-    width: 100%; /* Konten juga penuh di layar kecil */
+  .about .about-text {
+    font-size: 1.4rem; /* Ukuran teks lebih kecil di layar kecil */
   }
 }
 
