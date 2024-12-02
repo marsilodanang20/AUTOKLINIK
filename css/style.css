@@ -383,54 +383,59 @@ body {
 }
 
 .about .row {
-  display: center;
+  display: flex;
+  justify-content: center; /* Agar item dalam .row berada di tengah */
+  flex-wrap: wrap; /* Mendukung responsivitas jika elemen melebihi lebar kontainer */
+  gap: 2rem; /* Jarak antar elemen dalam baris */
 }
 
 .about .row .about-img {
-  flex: 1 1 50rem;
+  flex: 1 1 50%; /* Proporsi lebar kolom gambar */
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: visible; /* Pastikan gambar bisa tampil sepenuhnya */
 }
 
 .about .row .about-img img {
-  width: 100%; /* Lebar gambar menyesuaikan kontainer */
-  height: auto; /* Tinggi gambar menyesuaikan proporsi */
-  object-fit: contain; /* Tampilkan gambar sepenuhnya tanpa cropping */
-}
-
-@media (max-width: 768px) {
-  .about .row .about-img {
-    flex: none;
-    width: 100%;
-    height: auto;
-    padding: 1rem;
-  }
-
-  .about .row .about-img img {
-    width: 100%; /* Gambar menyesuaikan lebar layar */
-    height: auto;
-    object-fit: contain;
-  }
+  max-width: 100%; /* Gambar tidak melebihi ukuran kontainer */
+  height: auto; /* Menjaga rasio aspek gambar */
+  object-fit: contain; /* Menampilkan gambar sepenuhnya tanpa cropping */
 }
 
 .about .row .content {
-  flex: 1 1 30rem;
-  padding: 0 1rem;
+  flex: 1 1 30%; /* Proporsi lebar kolom konten */
+  padding: 1rem; /* Memberikan ruang dalam konten */
+  text-align: justify; /* Merapikan teks agar lebih teratur */
 }
 
 .about .row .content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--secondary); /* Warna teks heading */
 }
 
 .about .row .content p {
-  margin-bottom: 0.8rem;
-  font-size: 1.3rem;
-  font-weight: 100;
-  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: var(--text-color); /* Tambahkan variabel untuk warna teks */
 }
+
+@media (max-width: 768px) {
+  .about .row {
+    flex-direction: column; /* Elemen ditumpuk secara vertikal di layar kecil */
+  }
+
+  .about .row .about-img {
+    flex: none;
+    width: 100%; /* Lebar penuh untuk gambar di perangkat kecil */
+  }
+
+  .about .row .content {
+    width: 100%; /* Konten juga penuh di layar kecil */
+  }
+}
+
 
 /* Products Section */
 /* Products Section */
