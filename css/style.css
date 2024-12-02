@@ -359,48 +359,78 @@ body {
 }
 
 /* About Section */
-.about {
+.about,
+.menu,
+.products,
+.contact {
   padding: 8rem 7% 1.4rem;
 }
 
-.about h2 {
+.about h2,
+.menu h2,
+.products h2,
+.contact h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
 }
 
-.about h2 span {
+.about h2 span,
+.menu h2 span,
+.products h2 span,
+.contact h2 span {
   color: var(--primary);
 }
 
 .about .row {
+  display: center;
+}
+
+.about .row .about-img {
+  flex: 1 1 50rem;
   display: flex;
-  flex-direction: column; /* Elemen ditumpuk secara vertikal */
-  align-items: center; /* Semua elemen di tengah secara horizontal */
-  text-align: center; /* Menjaga teks di tengah */
+  justify-content: center;
+  align-items: center;
+  overflow: visible; /* Pastikan gambar bisa tampil sepenuhnya */
 }
 
-.about .about-img img {
-  max-width: 100%; /* Membuat gambar responsif */
-  height: auto; /* Menjaga proporsi gambar */
-  object-fit: contain; /* Gambar tidak terpotong */
-}
-
-.about .about-text {
-  margin-top: 1rem; /* Jarak antara gambar dan teks */
-  font-size: 1.6rem; /* Ukuran teks */
-  color: #fff; /* Warna teks */
-  line-height: 1.6; /* Jarak antar baris */
+.about .row .about-img img {
+  width: 100%; /* Lebar gambar menyesuaikan kontainer */
+  height: auto; /* Tinggi gambar menyesuaikan proporsi */
+  object-fit: contain; /* Tampilkan gambar sepenuhnya tanpa cropping */
 }
 
 @media (max-width: 768px) {
-  .about .about-text {
-    font-size: 1.4rem; /* Ukuran teks lebih kecil di layar kecil */
+  .about .row .about-img {
+    flex: none;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .about .row .about-img img {
+    width: 100%; /* Gambar menyesuaikan lebar layar */
+    height: auto;
+    object-fit: contain;
   }
 }
 
+.about .row .content {
+  flex: 1 1 30rem;
+  padding: 0 1rem;
+}
 
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
 
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
 
 /* Products Section */
 /* Products Section */
