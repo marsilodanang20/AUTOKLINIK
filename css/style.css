@@ -389,7 +389,7 @@ body {
 .about .about-text {
   margin-top: 1rem; /* Jarak antara gambar dan teks */
   font-size: 1.6rem; /* Ukuran teks */
-  color: #555; /* Warna teks */
+  color: #fff; /* Warna teks */
   line-height: 1.6; /* Jarak antar baris */
 }
 
