@@ -88,22 +88,22 @@ checkoutButton.addEventListener('click', async function (e) {
   const formData = new FormData(form);
   const data = new URLSearchParams(formData);
   const objData = Object.fromEntries(data);
-//   const massage = formatMassage(objData);
-//   window.open('http://wa.me/6285624653594?text=' + encodeURIComponent(massage));
+  const massage = formatMassage(objData);
+  window.open('http://wa.me/6285624653594?text=' + encodeURIComponent(massage));
 
 // minta transaction token menggunakan ajax / fetch
-try{
-    const response = await fetch('php/placeOrder.php', {
-        method: 'POST',
-        body: data,
-    });
-    const token = await response.text();
-    // console.log(token);
-    window.snap.pay(token);
+// try{
+//     const response = await fetch('php/placeOrder.php', {
+//         method: 'POST',
+//         body: data,
+//     });
+//     const token = await response.text();
+//     // console.log(token);
+//     window.snap.pay(token);
 
-}catch(err) {
-    console.log(err.message)
-}
+// }catch(err) {
+//     console.log(err.message)
+// }
    
 });
 
